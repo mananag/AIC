@@ -19,6 +19,7 @@ body
     font-size: 2em;
     font-family: 'Roboto', sans-serif;
     color:#1E0063;
+    cursor: pointer;
 }
 .project-border
 {
@@ -80,6 +81,7 @@ body
     font-family: 'Roboto', sans-serif;
     color: #6B007F;
     font-size: 20px;
+    cursor: pointer;
 }
 .apogee
 {
