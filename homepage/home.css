@@ -12,8 +12,8 @@ body
 }
 .nav
 {
-    top:7vh;
-    left:20vw;
+    top:6vh;
+    left:28vw;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -23,17 +23,26 @@ body
 {
     font-family: 'Roboto', sans-serif;
     font-size:20px;
-    margin-right: 78px;
+    margin-right: 70px;
     color: #EEEEEE;
+    transition: 0.2s;
 }
 .nav-elements:hover
 {
-
+    transform: scale(1.3);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.nav-elements:first-child
+{
+    font-weight: bold;
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
 }
 .reg
 {
-    top: 6.9vh;
-    left: 70vw;
+    top: 5.9vh;
+    left: 80vw;
     padding: 15px 25px;
     height: 25px;
     background: #F9F9F9 0% 0% no-repeat padding-box;
