@@ -318,6 +318,7 @@ body
     width: 100%;
     height: 100%;
     display: none;
+    z-index: -1;
 }
 .group-147{
     position: absolute;
@@ -330,7 +331,7 @@ body
     opacity: 0.8;
     z-index: -1 ;
 }
-.mobile-path-2
+#mobile-path-2
 {
     position: absolute;
     background-image: url(Images/mobile/Path%202.svg);
@@ -390,6 +391,56 @@ body
     z-index: 1;
     display: none;
     background-repeat: no-repeat;
+}
+#menu
+{
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(59, 59, 187);
+    background: linear-gradient(0deg, rgba(59, 59, 187, 1) 0%, rgba(82, 81, 209, 1) 50%, rgba(143, 144, 226, 1) 100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+.menu-backdrop
+{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-image: url("Images/mobile/Group%20148.svg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.8;
+}
+.menu-item
+{
+    font-size: 4em;
+    font-family: BAHNSCHRIFT;
+    color: #6B007F;
+    font-weight: bold;
+    margin-top: 8vh;
+    z-index: 10000;
+}
+#menu-cross
+{
+    position: absolute;
+    top:4vh;
+    background-image: url("Images/mobile/cancel%20(4).svg");
+    right: 10vw;
+    background-size: contain;
+    height: 80px;
+    width: 100px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 @media all and (max-width: 1000px) {
     .background-common {

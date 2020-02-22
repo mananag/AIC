@@ -68,8 +68,22 @@ function right(){
 function carousel_active()
 {
     document.getElementById('outer').style.transform = "translateY(0vh)";
+    document.getElementById('menu-tab').style.zIndex = "0";
 }
 function carousel_deactive()
 {
     document.getElementById('outer').style.transform = "translateY(100vh)";
+    document.getElementById('menu-tab').style.zIndex = "1";
+}
+function menu_active()
+{
+    document.getElementById('menu').style.display= "flex";
+    document.getElementById('menu').style.opacity= "1";
+    document.getElementById('mobile-path-2').style.zIndex = "1000";
+}
+function menu_deactive()
+{
+    document.getElementById('menu').style.display= "none";
+    document.getElementById('menu').style.opacity= "0";
+    document.getElementById('mobile-path-2').style.zIndex = "-1";
 }
