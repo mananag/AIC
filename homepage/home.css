@@ -29,17 +29,18 @@ body
     border: #002479 solid 10px;
     height:80px;
     width:150px;
-    opacity: 0.2;
+    opacity: 0.25;
     transition: 0.2s;
 }
 .project-border:hover
 {
     width:400px;
+    opacity: 0.5;
 }
 .nav
 {
     top:6vh;
-    left:28vw;
+    left:25vw;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -68,7 +69,7 @@ body
 .reg
 {
     top: 5.9vh;
-    left: 80vw;
+    left: 83vw;
     padding: 15px 25px;
     height: 25px;
     background: #F9F9F9 0% 0% no-repeat padding-box;
@@ -133,166 +134,172 @@ body
     font-family: 'BAHNSCHRIFT';
     font-weight: bold;
 }
-html,body {
-    padding: 0;
-    margin: 0;
-}
-#outer{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: absoulte;
-    top:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: transparent linear-gradient(180deg, #8F90E2 0%, #8F90E2 0%, #3B3BBB 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
-    transition:0.5s;
-    transform: translateY(100vh);
-}
-.outer-active
+.background-common
 {
-    transform: translateY(0vh);
-}
-#cross
-{
-    position: absolute;
-    top:  5vh;
-    right: 5vh;
-    transition: 0.5s;
-}
-.cross-active
-{
-    top:  5vh;
-    right: 5vh;
-}
-#crossimg{
-    height: 5vh;
-    width: 5vh;
-    transition: all 1.5s ease;
-}
-#crossimg:hover{
-    transform: rotate(360deg);
-    transition: all 1.5s ease;
-}
-#left{
-    width: 4vw;
-    height: 7vh;
-    position: absolute;
-    top: 49.5vh;
-    align-items: center;
-    justify-content: center;
-    left: 5vw;
-    transition: 0.5s;
-}
-.active
-{
-    top:49.5vh;
-}
-#left:hover > .back{
-    opacity: 1;
-    height: 4vh;
-    width: 2vw;
-    transform: translate(-0.7vw,0.5vh);
-}
-#left:hover > .dot1{
-    opacity: 1;
-    height: 4vh;
-    width: 4vh;
-    transform: translate(1vw,0.9vh);
-}
-#right{
-    width: 4vw;
-    height: 7vh;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    top: 49.5vh;
-    left: 90vw;
-    transition: 0.5s;
-}
-#right:hover > .next{
-    opacity: 1;
-    height: 4vh;
-    width: 2vw;
-    transform: translate(1.5vw,0.5vh);
-}
-#right:hover > .dot2{
-    opacity: 1;
-    height: 4vh;
-    width: 4vh;
-    transform: translate(-1vw,0.9vh);
-}
-.next{
-    height: 5vh;
-    width: 3vw;
-    color: white;
-    opacity: 0.6;
-    transition: all .5s ease;
-}
-.back{
-    height: 5vh;
-    width: 3vw;
-    color: white;
-    opacity: 0.6;
-    transition: all .5s ease;
-}
-.dot1{
-    height: 6vh;
-    width: 6vh;
-    position: absolute;
-    left: -0.6vw;
-    top: -0.4vh;
-    opacity: 0.6;
-    transition: all .5s ease;
-}
-.dot2{
-    height: 6vh;
-    width: 6vh;
-    position: absolute;
-    right: 0.4vw;
-    top: -0.4vh;
-    opacity: 0.6;
-    transition: all .5s ease;
-}
-.carousal{
+    height: 100%;
     width: 100%;
-    padding: 30px 0;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    transition: transform 0.75s ease-in;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
-.page{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    min-width: 100%;
+.background-home
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
-.box{
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease-in;
-    background: #A49BF09E 0% 0% no-repeat padding-box;
-    box-shadow: 0px 7px 20px #00000029;
-    mix-blend-mode: overlay;
-    border: 10px solid #FFFFFF;
-    opacity: 0.9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
+.path-4
+{
+    position: absolute;
+    background-image: url("Images/Path%204.svg");
+    top: -110px;
+    right: -300px;
+    height: 200vh;
+    width: 54vw;
+    background-size: contain;
+    opacity: 0.5;
 }
-.slider{
-    text-align: center;
-    margin: 10px 0;
+.path-2
+{
+    position: absolute;
+    background-image: url("Images/Path%202.svg");
+    background-size: cover;
+    bottom: 0vh;
+    right: -4vw;
+    height: 190px;
+    width: 89vw;
 }
-.dot{
-    width: 10px;
-    height: 10px;
-    border: 3.5px solid #ffffff;
-    margin: 3px;
-    display: inline-block;
-    cursor: pointer;
-    transition: 0.75s;
+.ellipse-3
+{
+    position: absolute;
+    background-image: url(Images/Ellipse%203.svg);
+    background-size: contain;
+    top: -16vh;
+    right: -14vh;
+    height: 50vh;
+    width: 50vh;
+    background-repeat: no-repeat;
+    transform: scale(1.6);
+}
+.group-130
+{
+    position: absolute;
+    bottom: 0vh;
+    right: 0vw;
+    background-image: url("Images/Group%20130.svg");
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 12vw;
+}
+.group-5
+{
+    position: absolute;
+    bottom: 2vh;
+    right: 35vw;
+    background-image: url(Images/Group%205.svg);
+    background-repeat: no-repeat;
+    height: 2.2vh;
+    width: 8vw;
+    background-size: contain;
+}
+.autonomy
+{
+    position: absolute;
+    bottom: 3vh;
+    right: 53vw;
+    background-image: url(Images/autonomy.png);
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 8vw;
+    background-size: contain;
+    z-index: -1;
+}
+.Polygon-2
+{
+    position: absolute;
+    bottom: 3vh;
+    right: 88vw;
+    background-image: url(Images/Polygon%202.svg);
+    background-repeat: no-repeat;
+    height: 8vh;
+    width: 8vw;
+    background-size: contain;
+    z-index: -1;
+}
+.Polygon-1
+{
+    position: absolute;
+    bottom: 48vh;
+    right: 3vw;
+    background-image: url(Images/Polygon%201.svg);
+    background-repeat: no-repeat;
+    height: 8vh;
+    width: 100px;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0.8;
+}
+.repeat-grid-1
+{
+    position: absolute;
+    top: -3vh;
+    right: 39vh;
+    background-image: url(Images/Repeat%20Grid%201.svg);
+    background-repeat: no-repeat;
+    height: 17vh;
+    width: 100px;
+    background-size: contain;
+    z-index: -2;
+}
+.ellipse-2
+{
+    position: absolute;
+    top: 24vh;
+    right: 17vh;
+    background-image: url(Images/Ellipse%202.svg);
+    background-repeat: no-repeat;
+    height: 3.5vh;
+    width: 100px;
+    background-size: contain;
+    z-index: -2;
+}
+.ellipse-1
+{
+    position: absolute;
+    top: 76vh;
+    right: 32vh;
+    background-image: url(Images/Ellipse%201.svg);
+    background-repeat: no-repeat;
+    height: 3.5vh;
+    width: 30px;
+    background-size: contain;
+    z-index: -2;
+}
+.project-management
+{
+    position: absolute;
+    top: 61vh;
+    right: 15vh;
+    background-image: url(Images/project-management.svg);
+    background-repeat: no-repeat;
+    height: 22.5vh;
+    width: 104px;
+    background-size: contain;
+    z-index: -2;
+}
+.path-3
+{
+    position: absolute;
+    background-image: url(Images/Path%202.svg);
+    background-size: cover;
+    top: -40vh;
+    right: -28vw;
+    height: 516px;
+    width: 106vw;
+    transform: rotateX(180deg);
+    opacity: 0.8;
 }
