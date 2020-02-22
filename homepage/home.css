@@ -1,14 +1,24 @@
 *
 {
     box-sizing: border-box;
+    overflow: hidden;
 }
 body
 {
     background: transparent linear-gradient(180deg, #8F90E2 0%, #8F90E2 0%, #5251D1 73%, #3B3BBB 100%) 0% 0% no-repeat padding-box;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     box-sizing: border-box;
     overflow: hidden;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu-bar
+{
+    display: none;
+    back
 }
 .project
 {
@@ -302,4 +312,145 @@ body
     width: 106vw;
     transform: rotateX(180deg);
     opacity: 0.8;
+}
+.background-home-mobile{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.group-147{
+    position: absolute;
+    background-image: url(Images/mobile/Group%20147.svg);
+    background-size: contain;
+    top: 47vh;
+    right: 0vw;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.8;
+    z-index: -1 ;
+}
+.mobile-path-2
+{
+    position: absolute;
+    background-image: url(Images/mobile/Path%202.svg);
+    background-size: cover;
+    top: -42vh;
+    right: 0vw;
+    height: 83vh;
+    width: 126vw;
+    opacity: 0.8;
+    z-index: -1;
+}
+.mobile-path-3
+{
+    position: absolute;
+    background-image: url(Images/mobile/Path%203.svg);
+    background-size: cover;
+    bottom: -55vh;
+    right: 0vw;
+    height: 83vh;
+    width: 239vw;
+    opacity: 1;
+    z-index: -1;
+}
+.mobile-group-5
+{
+    position: absolute;
+    background-image: url(Images/mobile/Group%205.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 5vh;
+    right: 66vw;
+    height: 2vh;
+    width: 18vw;
+    opacity: 1;
+    z-index: -1;
+}
+.mobile-polygon{
+    position: absolute;
+    background-image: url(Images/mobile/Polygon%202.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0vh;
+    right: 2vw;
+    height: 6vh;
+    width: 18vw;
+    opacity: 1;
+    z-index: -1;
+}
+#menu-tab{
+    position: absolute;
+    top:4vh;
+    background-image: url("Images/mobile/Group%201.svg");
+    right: 10vw;
+    background-size: contain;
+    height: 50px;
+    width: 100px;
+    z-index: 1;
+    display: none;
+    background-repeat: no-repeat;
+}
+@media all and (max-width: 1000px) {
+    .background-common {
+        display: none;
+    }
+
+    .background-home {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .aic {
+        transform: scale(1.7);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 28vw;
+        top: 10vh;
+        position: absolute;
+    }
+
+    .project {
+        background: rgb(89, 40, 156);
+        background: linear-gradient(90deg, rgba(89, 89, 211, 1) 0%, rgba(89, 40, 156, 1) 50%);
+        border-radius: 100px;
+        padding: 20px 60px;
+        box-shadow: 0px 4px 16px 0px black;
+        color: white;
+        left: 50vw;
+        top: 70vh;
+        transform: translateX(-50%) scale(1.2);
+        opacity: 1;
+    }
+    .reg
+    {
+        background: none;
+        border-color: white;
+        color: white;
+        transform: scale(1.5);
+        left: 10vw;
+        font-weight: bolder;
+        padding: 20px 40px;
+        font-size: 1.5em;
+        top: 4vh;
+    }
+    body {
+        background: rgb(59, 59, 187);
+        background: linear-gradient(0deg, rgba(59, 59, 187, 1) 0%, rgba(82, 81, 209, 1) 50%, rgba(143, 144, 226, 1) 100%);
+    }
+    .project-border{
+        display: none;
+    }
+    .background-home-mobile{
+        display: block;
+    }
+    #menu-tab{
+        display: block;
+    }
 }
