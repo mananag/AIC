@@ -77,13 +77,13 @@ function carousel_deactive()
 }
 function menu_active()
 {
-    document.getElementById('menu').style.display= "flex";
     document.getElementById('menu').style.opacity= "1";
     document.getElementById('mobile-path-2').style.zIndex = "1000";
+    document.getElementById('menu').style.transform= "translateX(-100vw)";
 }
 function menu_deactive()
 {
-    document.getElementById('menu').style.display= "none";
     document.getElementById('menu').style.opacity= "0";
     document.getElementById('mobile-path-2').style.zIndex = "-1";
+    document.getElementById('menu').style.transform= "translateX(0vw)";
 }
