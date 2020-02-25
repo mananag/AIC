@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>carousel</title>
+    <link href="carousel.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="outer">
+        <div class="cross">
+            <img src="cross.png" class="crossimg">
+        </div>
+        <div class="fillers">
+            <img src="circle1.png" class="circle1">
+            <img src="circle2.png" class="circle2">
+            <img src="circle3.png" class="circle3">
+            <img src="circle4.png" class="circle4">
+            <img src="idealogo.png" class="idealogo">
+            <img src="triangle.png" class="traingle">
+            <img src="zigzag.png" class="zigzag">
+        </div>
+        <div class="rightpath">
+            <img src="right path.png" class="rightpathimg">
+        </div>
+        <div class="bottompath">
+            <img src="bottom path.png" class="bottompathimg">
+        </div>
+        <div class="carousal"></div>
+        <div class="slider"></div>
+        <div class="left" onclick="left()">
+            <img src="back.png" class="back">
+            <img src="dot.png" class="dot1">
+        </div>
+        <div class="right" onclick="right()">
+            <img src="next.png" class="next">
+            <img src="dot.png" class="dot2">
+        </div>
+    </div>
+    </div>
+<script>
+    var total = 5;
+    var singlePage = 1;
+    var width = 60;
+    var height = 70;
+    var fontSize = 2;
+    var noOfPages = 5;
+    for(var i=0;i<noOfPages;i++){
+        var num = i+1
+        var className = 'c'+ num;
+        var newPage = document.createElement('div');
+        newPage.className = 'page ' + className;
+        for(var j=0;j<singlePage;j++){
+            var newBox = document.createElement('div');
+            newBox.className = 'box';
+            newBox.style.width = width + 'vw';
+            newBox.style.height = height + 'vh';
+            newBox.style.fontSize = fontSize + 'rem';
+            var numBox = i*singlePage + j + 1;
+            newBox.innerHTML = numBox;
+            newPage.appendChild(newBox);
+        }
+        document.getElementsByClassName("carousal")[0].appendChild(newPage);
+    }
+    var  activePage = 1;
+    function animation(){
+        var carousal = document.getElementsByClassName('carousal')[0];
+        carousal.style.transform = "translate(" + (-100*( activePage-1)) + "%)"; 
+    }   
+    document.addEventListener("keyup",e=>{
+        if (e.keyCode == 39){
+            left();
+        }
+        else if(e.keyCode == 37){
+           right();
+        }
+    })
+    function left(){
+        if(activePage>1)
+            activePage--;
+        else
+            activePage=noOfPages;
+        animation();
+    }
+    function right(){
+        if(activePage<noOfPages)
+            activePage++;
+        else
+            activePage=1;
+        animation();
+        }
+    
+</script>
+</body>
+</html>
+</body>
