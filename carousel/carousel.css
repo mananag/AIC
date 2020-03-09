@@ -2,6 +2,10 @@ html,body {
     padding: 0;
     margin: 0;
 }
+a{
+    text-decoration: none;
+    color: oldlace;
+}
 .outer{
     width: 100vw;
     height: 100vh;
@@ -13,11 +17,41 @@ html,body {
     background: transparent linear-gradient(180deg, #8F90E2 0%, #8F90E2 0%, #3B3BBB 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
 }
+.outerrectimg{
+    display: none;
+}
 .cross{
     z-index: 20;
     position: absolute;
     top:  5vh;
     right: 5vh;
+}
+.crossimg2{
+    display: none;
+}
+.toppathimg{
+    display: none;
+}
+.bottompathimg2{
+    display: none;
+}
+.background1{
+    display: none;
+}
+.background2{
+    display: none;
+}
+.next2{
+    display: none;
+}
+.back2{
+    display: none;
+}
+.traingle2{
+    display: none;
+}
+.zigzag2{
+    display: none;
 }
 .crossimg{
     height: 5vh;
@@ -30,6 +64,7 @@ html,body {
 }
 .left{
     width: 4vw;
+    z-index: 9;
     height: 7vh;
     position: absolute;
     top: 49.5vh;
@@ -39,18 +74,19 @@ html,body {
 }
 .left:hover > .back{
     opacity: 1;
-    height: 4vh;
+    height: 2vw;
     width: 2vw;
-    transform: translate(-0.7vw,0.5vh);
+    transform: translate(-0.7vw,0.3vw);
 }
 .left:hover > .dot1{
     opacity: 1;
-    height: 4vh;
-    width: 4vh;
-    transform: translate(1vw,0.9vh);
+    height: 2vw;
+    width: 2vw;
+    transform: translate(1vw,0.5vw);
 }
 .right{
     width: 4vw;
+    z-index: 9;
     height: 7vh;
     position: absolute;
     align-items: center;
@@ -60,45 +96,45 @@ html,body {
 }
 .right:hover > .next{
     opacity: 1;
-    height: 4vh;
+    height: 2vw;
     width: 2vw;
-    transform: translate(1.5vw,0.5vh);
+    transform: translate(1.5vw,0.3vw);
 }
 .right:hover > .dot2{
     opacity: 1;
-    height: 4vh;
-    width: 4vh;
-    transform: translate(-1vw,0.9vh);
+    height: 2vw;
+    width: 2vw;
+    transform: translate(-1vw,0.7vw);
 }
 .next{
-    height: 5vh;
+    height: 2.5vw;
     width: 3vw;
     color: white;
     opacity: 0.6;
     transition: all .5s ease;
 }
 .back{
-    height: 5vh;
+    height: 2.5vw;
     width: 3vw;
     color: white;
     opacity: 0.6;
     transition: all .5s ease;
 }
 .dot1{
-    height: 6vh;
-    width: 6vh;
+    height: 3vw;
+    width: 3vw;
     position: absolute;
     left: -0.6vw;
-    top: -0.4vh;
+    top: -0.245vw;
     opacity: 0.6;
     transition: all .5s ease;
 }
 .dot2{
-    height: 6vh;
-    width: 6vh;
+    height: 3vw;
+    width: 3vw;
     position: absolute;
     right: 0.4vw;
-    top: -0.4vh;
+    top: -0.245vw;
     opacity: 0.6;
     transition: all .5s ease;
 }
@@ -124,15 +160,6 @@ html,body {
     height: 37vh;
     opacity: 0.74;
 }
-.circle4{
-    z-index: 15;
-    position: absolute;
-    top: 75vh;
-    left: calc(50vw - 10vh);
-    width: 20vh;
-    height: 20vh;
-    opacity: 1;
-}
 .idealogo{
     position: absolute;
     top: 30vh;
@@ -153,7 +180,7 @@ html,body {
     top: 83vh;
     left: 17vw;
     width: 5vw;
-    height: 3vh;
+    height: 1.5vw;
 }
 .rightpathimg{
     position: absolute;
@@ -163,7 +190,7 @@ html,body {
     height: 120vh;
 }
 .bottompathimg{
-    z-index: 10;
+    z-index:1;
     position: absolute;
     top: 75vh;
     left: -3vw;
@@ -172,6 +199,7 @@ html,body {
 }
 .carousal{
     width: 100%;
+    z-index: 7;
     padding: 30px 0;
     display: inline-flex;
     justify-content: flex-start;
@@ -185,19 +213,246 @@ html,body {
     min-width: 100%;
 }
 .box{
-    transform-style: preserve-3d;
+    position: absolute; 
     transition: transform 0.5s ease-in;
     background: #A49BF09E 0% 0% no-repeat padding-box;
     box-shadow: 0px 7px 20px #00000029;
     mix-blend-mode: overlay;
-    border: 10px solid #FFFFFF;
-    opacity: 0.9;
+    border: 10px solid white;
+    width: 60vw;
+    height: 70vh;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    opacity: 0.9;
+    display: flex;
     color: #ffffff;
 }
-.slider{
-    text-align: center;
-    margin: 10px 0;
+.logo{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top:0vh;
+    height: 7.5vw;
+    width: 60vw;
 }
+.download{
+    background-color: #9128c4;
+    top: 60vh;
+    z-index: 1000;
+    position: absolute;
+    font-size: 3vh;
+    line-height: 3vh;
+    text-align: center;
+    color: #0F1979;
+    font-family: "Bahnschrift";
+    padding-top: 5.5vh;
+    width: 20vh;
+    height: 14.5vh;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    opacity: 1;
+}
+.company{
+    position: absolute;
+    text-shadow: 5px 5px 10px #00000029;
+    color: #0F1979;  
+    font-family: "Bahnschrift";
+    font-weight: bold;
+    top: 10vw;
+    font-size: 5vw;
+    text-align: center;
+}
+.cash{
+    position: absolute;
+    text-shadow: 5px 5px 10px #00000029;
+    color: #0F1979;  
+    font-family: "Bahnschrift";
+    font-weight: bold;
+    top: 15vw;
+    font-size: 2.5vw;
+    text-align: center;
+}
+.d2c{
+    position: absolute;
+    text-shadow: 5px 5px 10px #00000029;
+    color: purple;
+    font-family: "Bahnschrift";
+    top: 20vw;
+    font-size: 2vw;
+    text-align: center;
+}
+@media all and (max-width: 1000px){
+    .company{
+        font-size: 7vw;
+    }
+    .cash{
+        top: 17vw;
+        font-size: 4vw;
+    }
+    .d2c{
+        top: 28vw;
+        font-size: 3vw;
+    }
+
+} 
+@media all and (max-width: 800px) 
+{
+    .company{
+        font-size: 8vw;
+        top: 8vw;
+    }
+    .cash{
+        font-size: 4vw;
+    }
+    .d2c{
+        font-size: 3vw;
+    }
+    .circle1{
+        display: none;
+    }
+    .circle2{
+        display: none;
+    }
+    .circle3{
+        display: none;
+    }
+    .idealogo{
+        display: none;
+    }
+    .rightpathimg{
+        display: none;
+    }
+    .bottompathimg{
+        display: none;
+    }
+    .bottompathimg2{
+        z-index:1;
+        position: absolute;
+        top: 70vh;
+        left: -3vw;
+        width: 110vw;
+        height: 50vh;
+    }
+    .dot1{
+        display: none;
+    }
+    .dot2{
+        display: none;
+    }
+    .back{
+        display: none;
+    }
+    .next{
+        display: none;
+    }
+    .zigzag{
+        display: none;
+    }
+    .traingle{
+        display: none;
+    }
+    .zigzag2{
+        display: block;
+        position: absolute;
+        top: 94vh;
+        left: 14vw;
+    }
+    .traingle2{
+        display: block;
+        position: absolute;
+        top: 93vh;
+        left: 83vw;
+    }
+    .box{
+    position: absolute;
+    height: 60vh;
+    width: 75vw;
+    border: none;
+    background: none;
+    box-shadow: none;
+    }
+    .outerrectimg{
+        position: absolute;
+        top: 20vh;
+        left: 12.5vw;
+        display: block;
+        height: 60vh;
+        width: 75vw;
+    }
+    .crossimg{
+        display: none;
+    }
+    .crossimg2{
+        display: block;
+        position: absolute;
+        top: 3vh;
+        left: -10vw;
+    }
+    .bottompathimg2{
+        display: block;
+        position: absolute;
+        height: 140vh;
+        width: 400vw;
+        top: 55vh;
+        left:-220vw;
+    }
+    .toppathimg{
+        display: block;
+        position: absolute;
+        height: 150vh;
+        width: 200vw;
+        top: -80vh;
+        left:-45vw;
+    }
+    .background1{
+        display: block;
+        position: absolute;
+        height: 150vh;
+        width: 150vw;
+        top: 50vh;
+        left:-27vw;
+        opacity: 0.5;
+    }.background2{
+        display: block;
+        position: absolute;
+        height: 150vh;
+        width: 150vw;
+        top: -120vh;
+        left:-27vw;
+        opacity: 0.5;
+    }
+    .back2{
+        display: block;
+        position: absolute;
+        top: -2.5vh;
+        height: 7vh;
+        left: -5vw;
+        
+    }
+    .next2{
+        display: block;
+        position: absolute;
+        top: -3vh;
+        height: 7vh;
+        right: -5vw;
+    }
+    .logo{
+        top: -3.75vw;
+    }
+    .download{
+        position: absolute;
+        background: none;
+        height: 4vw;
+        width: 50vw;
+        top: 64vh;
+        font-size: 3.2vw;
+        color: oldlace;
+        border: 2px oldlace solid;
+        border-radius: 4vw;
+        padding-top: 1.5vw;
+        line-height: 2.7vw;
+    }
+}
+
