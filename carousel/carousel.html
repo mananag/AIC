@@ -11,41 +11,53 @@
     <div class="outer">
         <div class="cross">
             <img src="cross.png" class="crossimg">
+            <img src="cross2.png" class="crossimg2">
         </div>
         <div class="fillers">
             <img src="circle1.png" class="circle1">
             <img src="circle2.png" class="circle2">
             <img src="circle3.png" class="circle3">
-            <img src="circle4.png" class="circle4">
             <img src="idealogo.png" class="idealogo">
             <img src="triangle.png" class="traingle">
             <img src="zigzag.png" class="zigzag">
+            <img src="triangle2.png" class="traingle2">
+            <img src="zigzag2.png" class="zigzag2">
         </div>
         <div class="rightpath">
             <img src="right path.png" class="rightpathimg">
         </div>
+        <div class="toppath">
+            <img src="top path.png" class="toppathimg">
+        </div>
         <div class="bottompath">
             <img src="bottom path.png" class="bottompathimg">
+            <img src="bottom path 2.png" class="bottompathimg2">
+        </div>
+        <div class="background">
+            <img src="background1.png" class="background1">
+            <img src="background2.png" class="background2">
         </div>
         <div class="carousal"></div>
-        <div class="slider"></div>
         <div class="left" onclick="left()">
             <img src="back.png" class="back">
+            <img src="back2.png" class="back2">
             <img src="dot.png" class="dot1">
         </div>
         <div class="right" onclick="right()">
             <img src="next.png" class="next">
+            <img src="next2.png" class="next2">
             <img src="dot.png" class="dot2">
+        </div>
+        <div class="outerrect">
+            <img src="outerrect.png" class="outerrectimg">
         </div>
     </div>
     </div>
 <script>
-    var total = 5;
+    var total = 4;
     var singlePage = 1;
-    var width = 60;
-    var height = 70;
     var fontSize = 2;
-    var noOfPages = 5;
+    var noOfPages = 4;
     for(var i=0;i<noOfPages;i++){
         var num = i+1
         var className = 'c'+ num;
@@ -53,16 +65,48 @@
         newPage.className = 'page ' + className;
         for(var j=0;j<singlePage;j++){
             var newBox = document.createElement('div');
-            newBox.className = 'box';
-            newBox.style.width = width + 'vw';
-            newBox.style.height = height + 'vh';
-            newBox.style.fontSize = fontSize + 'rem';
+            var logoBox = document.createElement('div');
+            var companyName = document.createElement('div');
+            var cashPrize = document.createElement('div');
+            var download = document.createElement('div');
+            var d2c = document.createElement('div');
             var numBox = i*singlePage + j + 1;
-            newBox.innerHTML = numBox;
+            newBox.className = 'box ' + numBox;
+            logoBox.className = 'logo ' + numBox;
+            d2c.className = 'd2c ' + numBox;
+            companyName.className = 'company ' + numBox;
+            cashPrize.className = 'cash ' + numBox;
+            download.className = 'download ' + numBox;
             newPage.appendChild(newBox);
+            newBox.appendChild(logoBox);
+            newBox.appendChild(companyName);
+            newBox.appendChild(cashPrize);
+            newBox.appendChild(download);
+            newBox.appendChild(d2c);
         }
         document.getElementsByClassName("carousal")[0].appendChild(newPage);
+        
     }
+    document.getElementsByClassName("company")[0].innerHTML="ZULIP";
+    document.getElementsByClassName("logo")[0].innerHTML='<img src="zulip.jpg" style="width:auto;height:10vw;">';
+    document.getElementsByClassName("cash")[0].innerHTML="Rs.50,000/- + Certification by Zulip CEO";
+    document.getElementsByClassName("d2c")[0].innerHTML="<a href='https://dare2compete.com/o/aic-zulip-apogee-birla-institute-of-technology-science-bits-pilani-98699' style='text-decoration: none;'>Link for Dare to Compete Challenge</a>";
+    document.getElementsByClassName("download")[0].innerHTML="<a href='zulip.pdf' style='text-decoration: none; font-family: " + 'Bahnschrift ' + ";'>Download Problem Statement</a>"
+    document.getElementsByClassName("company")[1].innerHTML="GE HEALTHCARE";
+    document.getElementsByClassName("logo")[1].innerHTML='<img src="ge.jfif" style="width:auto;height:10vw;">';
+    document.getElementsByClassName("cash")[1].innerHTML="Company signed certificates + summer internship opportunity";
+    document.getElementsByClassName("d2c")[1].innerHTML="<a href='https://dare2compete.com/o/aic-yamaha-apogee-birla-institute-of-technology-science-bits-pilani-99997/amp' style='text-decoration: none;'>Link for Dare to Compete Challenge</a>";
+    document.getElementsByClassName("download")[1].innerHTML="Download Problems: <a href='ge.pptx' style=' font-family: " + 'Bahnschrift ' + ";'>1</a>+<a href='ge.pptx' style=' font-family: " + 'Bahnschrift ' + ";'>2</a>"
+    document.getElementsByClassName("company")[2].innerHTML="YAMAHA";
+    document.getElementsByClassName("logo")[2].innerHTML='<img src="yamaha.jpg" style="width:auto;height:10vw;">';
+    document.getElementsByClassName("cash")[2].innerHTML="Rs.50,000/-";
+    document.getElementsByClassName("d2c")[2].innerHTML="<a href='https://dare2compete.com/o/aic-ge-healthcare-apogee-birla-institute-of-technology-science-bits-pilani-100473' style='text-decoration: none;'>Link for Dare to Compete Challenge</a>";
+    document.getElementsByClassName("download")[2].innerHTML="<a href='yamaha.pdf' style='text-decoration: none;;font-family: " + 'Bahnschrift ' + ";'>Download Problem Statement</a>"
+    document.getElementsByClassName("company")[3].innerHTML="CLUSTR";
+    document.getElementsByClassName("logo")[3].innerHTML='<img src="clustr.png" style="width:auto;height:10vw;">';
+    document.getElementsByClassName("cash")[3].innerHTML="Rs.40,000/- + Paid internship for 2 months";
+    document.getElementsByClassName("d2c")[3].innerHTML="<a href='https://dare2compete.com/o/apogee-innovation-challenge-2020-clustr-apogee-birla-institute-of-technology-science-bits-pilani-96379' style='text-decoration: none;'>Link for Dare to Compete Challenge</a>";
+    document.getElementsByClassName("download")[3].innerHTML="<a href='clustr.doc' style='text-decoration: none;font-family: " + 'Bahnschrift ' + ";'>Download Problem Statement</a>"
     var  activePage = 1;
     function animation(){
         var carousal = document.getElementsByClassName('carousal')[0];
@@ -70,10 +114,10 @@
     }   
     document.addEventListener("keyup",e=>{
         if (e.keyCode == 39){
-            left();
+            right();
         }
         else if(e.keyCode == 37){
-           right();
+           left();
         }
     })
     function left(){
