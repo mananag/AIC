@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="958" height="536" viewBox="0 0 958 536">
+  <defs>
+    <filter id="REFLEXIS_SYSTEMS" x="60" y="0" width="849" height="123" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_142" data-name="Group 142" transform="translate(-521 -271)">
+    <text id="Reflexis_is_the_leading_provider_of_real-time_store_operations_solutions_having_been_selected_by_more_than_250_global_retailers_to_simplify_store_operations_optimize_labor_spend_and_improve_store_execution._The_Reflexis_ONE_real-time_work_platform_he" data-name="Reflexis is the leading provider of real-time store 
+operations solutions having been selected by more than 
+250 global retailers to simplify store operations, optimize 
+labor spend, and improve store execution. 
+The Reflexis ONE real-time work platform he" transform="translate(1000 490)" fill="#e9e9e9" font-size="37" font-family="Roboto-Regular, Roboto"><tspan x="-398.988" y="0">Reflexis is the leading provider of real-time store </tspan><tspan x="-461.895" y="44">operations solutions having been selected by more than </tspan><tspan x="-469.907" y="88">250 global retailers to simplify store operations, optimize </tspan><tspan x="-346.613" y="132">labor spend, and improve store execution. </tspan><tspan x="-462.365" y="176">The Reflexis ONE real-time work platform helps retailers </tspan><tspan x="-461.552" y="220">drive simplification for stores and improved line-of-sight </tspan><tspan x="-478.335" y="264">for field management resulting in significant time savings, </tspan><tspan x="-436.177" y="308">precise execution, and superior customer experience</tspan><tspan y="308" font-family="Roboto-Light, Roboto" font-weight="300">.</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 521, 271)" filter="url(#REFLEXIS_SYSTEMS)" style="mix-blend-mode: darken;isolation: isolate">
+      <text id="REFLEXIS_SYSTEMS-2" data-name="REFLEXIS SYSTEMS" transform="translate(70 84)" fill="#0f1979" font-size="93" font-family="Bahnschrift" font-weight="700"><tspan x="0" y="0">REFLEXIS SYSTEMS</tspan></text>
+    </g>
+    <text id="Rs.50_000_-_Summer_Internships" data-name="Rs.50,000/- + Summer Internships" transform="translate(1003 424)" fill="#6b007f" font-size="38" font-family="Roboto-Bold, Roboto" font-weight="700" style="mix-blend-mode: color-burn;isolation: isolate"><tspan x="-294.342" y="0">Rs.50,000/- + Summer Internships</tspan></text>
+  </g>
+</svg>

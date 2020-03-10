@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="239" height="29" viewBox="0 0 239 29">
+  <g id="Group_151" data-name="Group 151" transform="translate(-23 -20)">
+    <g id="Group_153" data-name="Group 153" transform="translate(23 20)">
+      <g id="Rectangle_10" data-name="Rectangle 10" fill="none" stroke="#fcfcfc" stroke-width="2">
+        <rect width="239" height="29" rx="14.5" stroke="none"/>
+        <rect x="1" y="1" width="237" height="27" rx="13.5" fill="none"/>
+      </g>
+      <text id="Download_Problem_Statements" data-name="Download Problem Statements" transform="translate(16 20)" fill="#fff" font-size="15" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Download Problem Statements</tspan></text>
+    </g>
+  </g>
+</svg>
